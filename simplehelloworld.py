@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
     var_hostname = gethostname()
-    var_msg = 'Container ID: %s ' % var_hostname
+    var_msg = 'Teste Container: %s ' % var_hostname
     return var_msg
 
 if __name__ == "__main__":
