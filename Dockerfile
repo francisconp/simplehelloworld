@@ -8,5 +8,4 @@ COPY requirements.txt /app/requirements.txt
 RUN pip install --upgrade pip
 RUN pip install -r /app/requirements.txt
 COPY simplehelloworld.py /app/simplehelloworld.py
-EXPOSE 80
 ENTRYPOINT python /app/simplehelloworld.py
