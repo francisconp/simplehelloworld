@@ -1,7 +1,9 @@
 from flask import Flask
 from socket import gethostname
+from os.environ import get
 
 app = Flask(__name__)
+default_port = get('default_port')
 
 @app.route("/")
 def hello():
@@ -10,4 +12,4 @@ def hello():
     return var_msg
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0',port='80')
+    app.run(host='0.0.0.0',port=default_port)
