@@ -11,6 +11,10 @@ app = Flask(__name__)
 
 default_port = environ.get('default_port')
 
+@app.route('/<path:path>')
+def static_file(path):
+    return app.send_static_file(path)
+
 @app.route("/")
 def root():
     var_hostname = gethostname()
